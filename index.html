@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <!-- <script src="./ibge.js" defer></script> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+
+    <form action="#" id="form">
+
+        <h1>Cadastro:</h1>
+
+        <input type="text" name="nome" id="nome" placeholder="Nome">
+        
+        <input type="email" name="email" id="email" placeholder="Email">
+
+        <select name="gen" id="genero" required>
+            <option class="select" id="gen" value="" disabled selected>Gênero</option>
+            <option value="masculino" class="select" >Masculino</option>
+            <option value="feminino" class="select" >Feminino</option>
+            <option value="outro" class="select" >Outro</option>
+        </select>
+
+        <input type="text" name="cpf" id="cpf" placeholder="CPF" minlength="11" maxlength="14">
+
+        <input type="text" name="tel" id="tel" placeholder="Celular" minlength="14" maxlength="15">
+
+        <label for="uf">Estado</label>
+        <select name="uf" id="uf">
+            <option value="0" disabled selected>Selecione</option>
+        </select>
+
+        <label for="regiao">Região</label>
+        <input type="text" name="regiao" id="regiao" placeholder="Região">
+
+        <label for="cidade">Cidade</label>
+        <select name="cidade" id="cidade">
+            <option value="0" disabled selected>Selecione</option>
+        </select>
+
+        <input type="submit" value="Enviar" id="enviaBtn">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Gênero</th>
+            <th>CPF</th>
+            <th>Celular</th>
+            <th>Estado</th>
+            <th>Região</th>
+            <th>Cidade</th>
+            </tr>
+        </thead>
+        <tbody id="cadastros"></tbody>
+    </table>
+
+</body>
+</html>
